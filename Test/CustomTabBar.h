@@ -14,6 +14,7 @@
    UIButton *btn2;
     UIButton *btn3;
     UIButton *btn4;
+    BOOL rotated;
 }
 
 

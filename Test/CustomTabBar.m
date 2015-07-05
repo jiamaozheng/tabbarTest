@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
 }
 
@@ -29,6 +30,8 @@
     
     [self hideExistingTabBar];
     [self addCustomElements];
+    [self.view setNeedsDisplay];
+    [UIViewController attemptRotationToDeviceOrientation];
 }
 
 - (void)hideExistingTabBar
@@ -45,12 +48,12 @@
 
 -(void)addCustomElements
 {
-    CGRect winFrame = [[UIScreen mainScreen]bounds];
+    CGRect winFrame = self.view.bounds; 
     
     // Initialise our two images
 //    UIImage *btnImage = [UIImage imageNamed:@"1.png"];
 //    UIImage *btnImageSelected = [UIImage imageNamed:@"1.png"];
-    UILabel *scoreLabel = [ [UILabel alloc ] initWithFrame:CGRectMake(0, winFrame.size.height-50, winFrame.size.width/4, 50)];
+    UILabel *scoreLabel = [ [UILabel alloc ] initWithFrame:CGRectMake(0, winFrame.size.height-50, self.tabBar.frame.size.width/4, 50)];
     scoreLabel.textAlignment =  UITextAlignmentCenter;
     scoreLabel.text = @"One";
     scoreLabel.textColor = [UIColor blueColor];
