@@ -42,6 +42,21 @@
     [super viewWillLayoutSubviews];
     [self addCustomElements];
     
+//    if (UIDeviceOrientationIsLandscape([self.view interfaceOrientation]))
+//    {
+//        //x,y as you want
+//        [ button setFrame:CGRectMake:(x,y,button.width,button.height)];
+//        
+//    }
+//    else
+//    {
+//        //In potrait
+//        //x,y as you want
+//        [ button setFrame:CGRectMake:(x,y,button.width,button.height)];
+//        
+//        
+//    }
+    
     NSLog(@"Bounds Height:%f %f", self.view.bounds.size.height, self.view.bounds.size.width);
 }
 
