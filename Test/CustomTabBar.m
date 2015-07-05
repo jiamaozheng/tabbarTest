@@ -48,7 +48,14 @@
 
 -(void)addCustomElements
 {
-    CGRect winFrame = self.view.bounds; 
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    CGRect winFrame = self.view.frame;
+    CGFloat width = winFrame.size.width;
+    CGFloat height = winFrame.size.height;
+    winFrame.size.height = (UIInterfaceOrientationIsLandscape(orientation)) ? MIN(width, height): MAX(width, height);
+    winFrame.size.width  = (UIInterfaceOrientationIsLandscape(orientation)) ? MAX(width, height): MIN(width, height);
+    self.view.frame = winFrame;
+//    CGRect winFrame = self.view.bounds; 
     
     // Initialise our two images
 //    UIImage *btnImage = [UIImage imageNamed:@"1.png"];
