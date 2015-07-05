@@ -20,27 +20,6 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
- 
-//    NSLog(@"Bounds Height:%f %f", self.view.bounds.size.height, self.view.bounds.size.width);
-
-}
-
--(void)viewWillLayoutSubviews{
-    [super viewWillLayoutSubviews];
-    [self addCustomElements];
-//    [self shouldAutorotate];
-    
-       NSLog(@"Bounds Height:%f %f", self.view.bounds.size.height, self.view.bounds.size.width);
-    // Your layout logic here
-}
-
 - (void)hideExistingTabBar
 {
     for(UIView *view in self.view.subviews)
@@ -51,6 +30,19 @@
             break;
         }
     }
+}
+
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+}
+
+-(void)viewWillLayoutSubviews{
+    [super viewWillLayoutSubviews];
+    [self addCustomElements];
+    
+    NSLog(@"Bounds Height:%f %f", self.view.bounds.size.height, self.view.bounds.size.width);
 }
 
 - (CGSize)getRotatedViewSize
@@ -64,6 +56,7 @@
             CGSizeMake(min, max) :
             CGSizeMake(max, min));
 }
+
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
 {
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context)
