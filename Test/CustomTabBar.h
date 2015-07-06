@@ -17,6 +17,7 @@
     BOOL rotated;
 }
 
+@property (nonatomic, strong) UITabBarController *customTabBar;
 
 -(void) hideExistingTabBar;
 -(void) addCustomElements;

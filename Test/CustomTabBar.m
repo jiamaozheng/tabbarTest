@@ -95,9 +95,10 @@
     winFrame.size.height = (UIInterfaceOrientationIsLandscape(orientation)) ? MIN(width, height): MAX(width, height);
     winFrame.size.width  = (UIInterfaceOrientationIsLandscape(orientation)) ? MAX(width, height): MIN(width, height);
 //    self.view.frame = winFrame;
-//    CGRect winFrame = self.tabBarController.tabBar.frame;
+//    self.customTabBar = [[UITabBarController alloc]init];
+//    CGRect winFrame = self.view.frame;
     NSLog(@"winFrame height %d", winFrame.size.height);
-    NSLog(@"tabbar height %d", self.tabBar.frame.size.height);
+    NSLog(@"tabbar width %d", self.customTabBar.tabBar.frame.size.height);
     
 //    CGSize winFrame = [self getRotatedViewSize];
     
