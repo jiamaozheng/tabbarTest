@@ -95,7 +95,9 @@
     winFrame.size.height = (UIInterfaceOrientationIsLandscape(orientation)) ? MIN(width, height): MAX(width, height);
     winFrame.size.width  = (UIInterfaceOrientationIsLandscape(orientation)) ? MAX(width, height): MIN(width, height);
 //    self.view.frame = winFrame;
-//    CGRect winFrame = self.view.bounds;
+//    CGRect winFrame = self.tabBarController.tabBar.frame;
+    NSLog(@"winFrame height %d", winFrame.size.height);
+    NSLog(@"tabbar height %d", self.tabBar.frame.size.height);
     
 //    CGSize winFrame = [self getRotatedViewSize];
     
@@ -104,22 +106,22 @@
 //    UIImage *btnImageSelected = [UIImage imageNamed:@"1.png"];
     UILabel *scoreLabel = [ [UILabel alloc ] initWithFrame:CGRectMake(0, winFrame.size.height-50, winFrame.size.width/4, 50)];
     scoreLabel.textAlignment =  UITextAlignmentCenter;
-    scoreLabel.text = @"One";
-    scoreLabel.textColor = [UIColor blueColor];
-    scoreLabel.backgroundColor = [UIColor greenColor];
-    scoreLabel.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(24.0)];
+    scoreLabel.text = @"b";
+    scoreLabel.textColor = [UIColor whiteColor];
+    scoreLabel.backgroundColor = [UIColor blueColor];
+    scoreLabel.font = [UIFont fontWithName:@"person" size:(24.0)];
     
     UILabel *scoreLabel11 = [ [UILabel alloc ] initWithFrame:CGRectMake(0, winFrame.size.height-10, winFrame.size.width/4, 10)];
     scoreLabel11.textAlignment =  UITextAlignmentCenter;
-    scoreLabel11.text = @"One";
-    scoreLabel11.textColor = [UIColor redColor];
-    scoreLabel11.backgroundColor = [UIColor greenColor];
+    scoreLabel11.text = @"impression";
+    scoreLabel11.textColor = [UIColor whiteColor];
+    scoreLabel11.backgroundColor = [UIColor blueColor];
     scoreLabel11.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(10.0)];
     
 //    scoreLabel.text = [NSString stringWithFormat: @"%d", score];
     
     btn1 = [UIButton buttonWithType:UIButtonTypeCustom]; //Setup the button
-    btn1.frame = CGRectMake(0, winFrame.size.height-50, winFrame.size.width/4, 50); // Set the frame (size and position) of the button)
+    btn1.frame = CGRectMake(0,winFrame.size.height-50, winFrame.size.width/4, 50); // Set the frame (size and position) of the button)
 //    [btn1 setBackgroundImage:btnImage forState:UIControlStateNormal]; // Set the image for the normal state of the button
 //    [btn1 setBackgroundImage:btnImageSelected forState:UIControlStateSelected]; // Set the image for the selected state of the button
     [btn1 setTag:0]; // Assign the button a "tag" so when our "click" event is called we know which button was pressed.
@@ -197,7 +199,7 @@
 //    [self.view addSubview:btn4];
     
     [self.view addSubview:scoreLabel];
-//        [self.view addSubview:scoreLabel11];
+        [self.view addSubview:scoreLabel11];
 //     [self.view addSubview:scoreLabel2];
 //     [self.view addSubview:scoreLabel3];
 //     [self.view addSubview:scoreLabel4];

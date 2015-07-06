@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1276BCE81B4AD1F100AE86DF /* person.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1276BCE71B4AD0FE00AE86DF /* person.ttf */; };
 		B29C75981B48C80900CC4445 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B29C75971B48C80900CC4445 /* main.m */; };
 		B29C759B1B48C80900CC4445 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B29C759A1B48C80900CC4445 /* AppDelegate.m */; };
 		B29C75A11B48C80900CC4445 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29C759F1B48C80900CC4445 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1276BCE71B4AD0FE00AE86DF /* person.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = person.ttf; sourceTree = "<group>"; };
 		B29C75921B48C80900CC4445 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29C75961B48C80900CC4445 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B29C75971B48C80900CC4445 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 		B29C75951B48C80900CC4445 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1276BCE71B4AD0FE00AE86DF /* person.ttf */,
 				B29C75CE1B48DC2A00CC4445 /* 1.png */,
 				B29C75D01B48DC3300CC4445 /* 2.png */,
 				B29C75CC1B48DC2200CC4445 /* 3.png */,
@@ -231,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1276BCE81B4AD1F100AE86DF /* person.ttf in Resources */,
 				B29C75A11B48C80900CC4445 /* Main.storyboard in Resources */,
 				B29C75CB1B48DC1500CC4445 /* 4.png in Resources */,
 				B29C75A61B48C80900CC4445 /* LaunchScreen.xib in Resources */,
@@ -390,6 +394,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -400,6 +405,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -458,6 +464,7 @@
 				B29C75B71B48C80A00CC4445 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B29C75B81B48C80A00CC4445 /* Build configuration list for PBXNativeTarget "TestTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +473,7 @@
 				B29C75BA1B48C80A00CC4445 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
